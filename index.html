@@ -48,6 +48,10 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .navbar-toggler-icon {
+            /* Create an SVG icon with the dark brand color (URL encoded) */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f1c2e' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
         .navbar-brand img {
             height: 35px;
             transition: all 0.3s ease;
@@ -311,7 +315,7 @@
                 border-radius: 0;
             }
             .navbar-collapse {
-                background-color: var(--brspl-dark);
+                background-color: var(--brspl-bg-soft);
                 padding: 15px;
                 border-radius: 8px;
                 margin-top: 10px;
