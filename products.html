@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRSPL Products - Glaze & Body Stains</title>
+    <meta name="description" content="Explore the complete BRSPL range of Glaze Stains (ID Series) and Body Stains (JD Series). View product codes, contents, and maximum firing temperatures.">
+    <meta name="keywords" content="ID series glaze stains, JD series body stains, ceramic color codes, high temperature ceramic stains, tile pigment catalogue, zirconium praseodymium yellow">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Shared Global Variables */
+        :root {
+            --brspl-dark: #0f1c2e; 
+            --brspl-accent: #7fb83b; /* Lime Green: #7fb83b */
+            --brspl-bg-soft: #f4f4f4; 
+            --brspl-logo-blue: #007bff; 
+            --brspl-text-secondary: #495057; 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--brspl-dark);
+            background-color: var(--brspl-bg-soft); 
+        }
+
+        /* --- 1. NAVBAR STYLES (Floating/Clean) --- */
+        .navbar {
+            background-color: white !important; 
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 20px; 
+            margin: 15px; 
+            width: calc(100% - 30px); 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+            max-width: 1200px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .navbar-brand img { height: 35px; }
+        .nav-link { color: var(--brspl-dark) !important; font-weight: 500; margin-left: 15px; padding: 0.5rem 0; position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--brspl-accent); transition: width .3s ease-out; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { color: var(--brspl-accent) !important; }
+
+        /* --- 2. PRODUCTS BANNER --- */
+        .products-banner {
+            background-color: white; 
+            min-height: 40vh; 
+            padding-top: 150px; 
+            padding-bottom: 50px;
+            text-align: center;
+            border-bottom-left-radius: 20px; 
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+        .products-banner h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--brspl-dark);
+        }
+        .products-banner p {
+            font-size: 1.25rem;
+            color: var(--brspl-text-secondary);
+            max-width: 800px;
+            margin: 10px auto 0;
+        }
+        
+        /* --- 3. CATEGORY CARDS --- */
+        .product-category-section {
+            padding: 80px 0;
+        }
+        .category-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        .category-card i {
+            font-size: 3.5rem;
+            color: var(--brspl-accent);
+            margin-bottom: 20px;
+        }
+        .category-card h3 {
+            font-weight: 700;
+            color: var(--brspl-dark);
+            margin-bottom: 15px;
+        }
+        .category-card p {
+            color: var(--brspl-text-secondary);
+            line-height: 1.7;
+        }
+
+        /* --- 4. VERSATILITY SECTION (Dark Block) --- */
+        .versatility-block {
+            background-color: var(--brspl-dark);
+            color: white;
+            padding: 60px 0;
+        }
+        .versatility-block h2 {
+            font-weight: 700;
+            color: var(--brspl-accent);
+        }
+        .versatility-block .list-group-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            color: white;
+            padding: 15px;
+            font-weight: 500;
+        }
+        .versatility-block .list-group-item i {
+            color: var(--brspl-accent);
+            font-size: 1.2rem;
+        }
+        /* --- 5. DETAILED PRODUCT TABLES --- */
+        .product-tables-section {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+        .product-table-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        .table-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--brspl-logo-blue);
+            margin-bottom: 30px;
+            padding-top: 15px; /* Added for anchor jump offset */
+        }
+        .table-striped > tbody > tr:nth-of-type(odd) > * {
+            background-color: var(--brspl-bg-soft);
+        }
+        .table th {
+            background-color: var(--brspl-dark);
+            color: white;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+        .table td {
+            font-size: 0.95rem;
+            vertical-align: middle;
+        }
+
+        /* --- 6. DOWNLOAD CTA SECTION --- */
+        .download-cta-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .download-cta-section h2 {
+            font-weight: 700;
+            color: var(--brspl-dark);
+        }
+        .btn-download {
+            background-color: var(--brspl-logo-blue) !important;
+            border-color: var(--brspl-logo-blue) !important;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-download:hover {
+            background-color: #0056b3 !important;
+            border-color: #0056b3 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        /* --- SHARED BUTTON STYLES --- */
+        .btn-primary {
+            background-color: var(--brspl-accent) !important;
+            border-color: var(--brspl-accent) !important;
+            font-weight: 600;
+            padding: 14px 35px; 
+            border-radius: 8px; 
+            box-shadow: 0 8px 15px rgba(127, 184, 59, 0.3); 
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+             background-color: #6a9c32 !important; 
+             border-color: #6a9c32 !important;
+             transform: translateY(-3px); 
+             box-shadow: 0 12px 20px rgba(127, 184, 59, 0.4); 
+        }
+
+        /* --- 7. FOOTER STYLES --- */
+        .footer-dark {
+            background-color: var(--brspl-dark) !important;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        .footer-dark h5 {
+            color: var(--brspl-accent);
+            font-weight: 600;
+        }
+        .footer-dark ul li a, .footer-dark p, .footer-dark address {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+        .footer-dark ul li a:hover {
+            color: var(--brspl-accent);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white sticky-top">
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="BRSPL Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quality.html">Quality Assurance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="products-banner">
+        <div class="container">
+            <h1>Our Full Range of Ceramic Stains</h1>
+            <p class="lead">From vibrant glazes to stable body coloration, explore the spectrum of BRSPL's high-performance ceramic colors designed for precision and durability.</p>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="product-categories" class="product-category-section">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5" style="font-size: 2.5rem;">Core Product Families</h2>
+                <div class="row g-4">
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="category-card shadow-sm">
+                            <i class="fas fa-palette"></i>
+                            <h3>Glaze Stains</h3>
+                            <p>A wide selection of colours specifically formulated for stable and vibrant results under the demanding conditions of glazed ceramic production (single and double firing).</p>
+                            <a href="#glaze-stains-table" class="btn btn-outline-secondary mt-3" style="--bs-btn-color: var(--brspl-accent); --bs-btn-border-color: var(--brspl-accent); --bs-btn-hover-bg: rgba(127, 184, 59, 0.1);">Explore Glazes</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="category-card shadow-sm">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Body Stains</h3>
+                            <p>High-quality pigments designed for uniform colour incorporation into the ceramic body matrix, perfect for homogeneous and fully vitrified tiles.</p>
+                            <a href="#body-stains-table" class="btn btn-outline-secondary mt-3" style="--bs-btn-color: var(--brspl-accent); --bs-btn-border-color: var(--brspl-accent); --bs-btn-hover-bg: rgba(127, 184, 59, 0.1);">Explore Body Colors</a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12 col-lg-4">
+                        <div class="category-card shadow-sm">
+                            <i class="fas fa-vial"></i>
+                            <h3>Specialty Chemicals</h3>
+                            <p>In addition to our core colour range, we supply select additives and technical chemicals that assist in the complex ceramic manufacturing process.</p>
+                            <a href="#download-catalog" class="btn btn-outline-secondary mt-3" style="--bs-btn-color: var(--brspl-accent); --bs-btn-border-color: var(--brspl-accent); --bs-btn-hover-bg: rgba(127, 184, 59, 0.1);">View Technical Additives</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="container my-5" style="border-top: 2px solid #ddd; opacity: 0.5;">
+        
+        <section id="product-versatility" class="versatility-block">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Designed for Every Ceramic Application</h2>
+                        <p class="lead" style="color: rgba(255, 255, 255, 0.85);">Our stain formulations are optimized to perform across the entire range of modern and traditional ceramic products, meeting diverse firing cycles and technical requirements.</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg mt-3">Request Custom Colour Sample</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="fas fa-check-circle me-3"></i> <strong>Vitrified Tiles (Polished & Unpolished):</strong> High density and thermal stability.</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle me-3"></i> <strong>Glazed Wall & Floor Tiles:</strong> Maximum colour brilliance and coverage.</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle me-3"></i> <strong>Sanitary Wares & Potteries:</strong> Reliable performance in long firing cycles.</li>
+                            <li class="list-group-item"><i class="fas fa-check-circle me-3"></i> <strong>Roto-printing and Digital Glazing:</strong> Fine particle sizes for modern application techniques.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="product-details" class="product-tables-section">
+            <div class="container">
+
+                <div class="product-table-wrapper" id="glaze-stains-table">
+                    <h2 class="table-heading">Glaze Stains</h2>
+                    <p class="text-secondary mb-4">The ID series is specifically formulated for the coloration of glazes, satisfying the requirements of high intensity and color uniformity across a wide chromatic range.</p>
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product Code</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Contents</th>
+                                    <th scope="col">Max Temperature</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>ID 11175</td><td>PR. YELLOW</td><td>Zr-Pr-Si</td><td>1180°C</td></tr>
+                                <tr><td>ID 14165</td><td>AL. BLUE</td><td>Co-Al-Si</td><td>1250°C</td></tr>
+                                <tr><td>ID 28145</td><td>SILICA BLUE</td><td>Co-Al</td><td>1350°C</td></tr>
+                                <tr><td>ID 15118</td><td>CHROME GREEN</td><td>Cr-Al</td><td>1300°C</td></tr>
+                                <tr><td>ID 19280</td><td>RED BROWN</td><td>Fe-Cr-Zn</td><td>1250°C</td></tr>
+                                <tr><td>ID 18179</td><td>CORAL BLACK</td><td>Fe-Cr-Co-Ni-Mn</td><td>1200°C</td></tr>
+                                <tr><td>ID 18130</td><td>MAGENTA</td><td>Ca-Sn-Cr</td><td>1250°C</td></tr>
+                                <tr><td>ID 13181</td><td>ORANGE BROWN</td><td>Fe-Cr-Zn</td><td>1250°C</td></tr>
+                                <tr><td>ID 11462</td><td>TURQUOISE BLUE</td><td>V-Zr</td><td>1250°C</td></tr>
+                                <tr><td>ID 35191</td><td>CORAL PINK</td><td>Zr-Fe-Si</td><td>1200°C</td></tr>
+                                <tr><td>ID 15170</td><td>CHROME GREEN</td><td>Cr-Fe-Al-Mg</td><td>1300°C</td></tr>
+                                <tr><td>ID 15174</td><td>CORAL PINK</td><td>Zr-Fe-Si</td><td>1200°C</td></tr>
+                                <tr><td>ID 19162</td><td>CHOCOLATE BROWN</td><td>Fe-Cr-Mn</td><td>1250°C</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-end mt-3"><a href="#product-categories" class="small text-decoration-none" style="color: var(--brspl-accent);"><i class="fas fa-arrow-up me-1"></i> Back to Categories</a></div>
+                </div>
+
+                <div class="product-table-wrapper" id="body-stains-table">
+                    <h2 class="table-heading">Body Stains</h2>
+                    <p class="text-secondary mb-4">The JD series is designed for use in the manufacturing of vitrified tiles, ensuring superior homogeneity and stability throughout the body.</p>
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product Code</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Contents</th>
+                                    <th scope="col">Max Temperature</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>JD 2A166</td><td>AL. BLUE</td><td>Co-Al-Zn</td><td>1250°C</td></tr>
+                                <tr><td>JD 29146</td><td>AL. BLUE</td><td>Co-Al-Zn</td><td>1200°C</td></tr>
+                                <tr><td>JD 24642</td><td>ORANGE</td><td>Ti-Sb-Cr</td><td>1250°C</td></tr>
+                                <tr><td>JD 21245</td><td>ORANGE</td><td>Ti-Sb-Cr</td><td>1250°C</td></tr>
+                                <tr><td>JD 21115</td><td>PINK</td><td>Cr-Fe</td><td>1250°C</td></tr>
+                                <tr><td>JD 21118</td><td>BLACK</td><td>Fe-Cr</td><td>1300°C</td></tr>
+                                <tr><td>JD 27145</td><td>GREEN</td><td>Cr-Al</td><td>1300°C</td></tr>
+                                <tr><td>JD 19133</td><td>WHITE</td><td>Ti-Zr-Si-Pr-Si</td><td>1300°C</td></tr>
+                                <tr><td>JD 19143</td><td>DARK BROWN</td><td>Ti-Sb-Cr-W</td><td>1300°C</td></tr>
+                                <tr><td>JD 21143</td><td>RED</td><td>Mn-Fe-Zn</td><td>1200°C</td></tr>
+                                <tr><td>JD 11346</td><td>LEMON YELLOW</td><td>Zr-Pr-Si</td><td>1300°C</td></tr>
+                                <tr><td>JD 15108</td><td>TURQUOISE BLUE</td><td>Zr-V-Si</td><td>1300°C</td></tr>
+                                <tr><td>JD 19199</td><td>GOLDEN BROWN</td><td>Ti-Sb-Cr-W</td><td>1250°C</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-end mt-3"><a href="#product-categories" class="small text-decoration-none" style="color: var(--brspl-accent);"><i class="fas fa-arrow-up me-1"></i> Back to Categories</a></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="download-catalog" class="download-cta-section">
+            <div class="container">
+                <div class="p-5 rounded-3 shadow-lg" style="background-color: white;">
+                    <h2 class="mb-3">View the Complete BRSPL Color Catalog</h2>
+                    <p class="lead mb-4" style="color: var(--brspl-text-secondary);">Download our comprehensive catalog for technical specifications, usage recommendations, and the full list of available colour codes.</p>
+                    <a href="BR_STEEL_CATALOG.pdf" target="_blank" class="btn btn-download btn-lg shadow-sm" download>
+                        <i class="fas fa-download me-2"></i> DOWNLOAD CATALOG (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="text-white pt-5 pb-3 footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="img/logo.png" alt="BRSPL Logo" height="50" class="mb-3">
+                    <p class="text-white-50">MFG of Ceramic Colours (Glaze & Body). Precision and innovation in every batch since 1982.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white-50 text-decoration-none" href="about.html">Company Profile</a></li>
+                        <li><a class="text-white-50 text-decoration-none" href="products.html">Product Range</a></li>
+                        <li><a class="text-white-50 text-decoration-none" href="quality.html">R&D and Quality</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Head Office</h5>
+                    <address class="text-white-50">
+                        Plot No. C-39, MIDC, TTC Indl. Area,<br>
+                        Navi Mumbai - 400 705. INDIA<br>
+                        <i class="fas fa-phone me-2"></i> +91 22 41410606<br>
+                        <i class="fas fa-envelope me-2"></i> <a href="mailto:info@brspl.com" class="text-white-50 text-decoration-none">info@brspl.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary mt-3">
+                <p class="mb-0 small text-white-50">&copy; <span id="currentYear"></span> BRSPL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

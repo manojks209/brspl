@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact BRSPL - Ceramic Colour Manufacturers</title>
+    <meta name="description" content="Get in touch with BRSPL's sales or technical team. Find our Head Office in Navi Mumbai and Works Unit in Ankleshwar. Request product information or a quote.">
+    <meta name="keywords" content="contact BRSPL, ceramic stain quotes, ceramic colour supplier phone number, BRSPL address Navi Mumbai, technical support ceramic pigments">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Shared Global Variables */
+        :root {
+            --brspl-dark: #0f1c2e; 
+            --brspl-accent: #7fb83b; /* Lime Green: #7fb83b */
+            --brspl-bg-soft: #f4f4f4; 
+            --brspl-logo-blue: #007bff; 
+            --brspl-text-secondary: #495057; 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--brspl-dark);
+            background-color: var(--brspl-bg-soft); 
+        }
+
+        /* --- 1. NAVBAR STYLES (Floating/Clean) --- */
+        .navbar {
+            background-color: white !important; 
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 20px; 
+            margin: 15px; 
+            width: calc(100% - 30px); 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+            max-width: 1200px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .navbar-brand img { height: 35px; }
+        .nav-link { color: var(--brspl-dark) !important; font-weight: 500; margin-left: 15px; padding: 0.5rem 0; position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--brspl-accent); transition: width .3s ease-out; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { color: var(--brspl-accent) !important; }
+
+        /* --- 2. CONTACT BANNER --- */
+        .contact-banner {
+            background-color: var(--brspl-dark); 
+            color: white;
+            min-height: 35vh; 
+            padding-top: 150px; 
+            padding-bottom: 50px;
+            text-align: center;
+            border-bottom-left-radius: 20px; 
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .contact-banner h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+        }
+        .contact-banner p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 10px auto 0;
+        }
+
+        /* --- 3. CONTACT FORM & INFO SECTION --- */
+        .contact-section {
+            padding: 80px 0;
+        }
+        .contact-form-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form-card h2 {
+            font-weight: 700;
+            color: var(--brspl-accent);
+            margin-bottom: 20px;
+        }
+        .form-control, .form-select {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: var(--brspl-accent);
+            box-shadow: 0 0 0 0.25rem rgba(127, 184, 59, 0.25);
+        }
+        .info-block {
+            padding: 30px;
+            background-color: var(--brspl-bg-soft);
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .info-block h4 {
+            font-weight: 700;
+            color: var(--brspl-dark);
+            border-bottom: 2px solid var(--brspl-accent);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .info-block i {
+            color: var(--brspl-accent);
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .info-block a {
+            color: var(--brspl-text-secondary);
+            text-decoration: none;
+        }
+        .info-block a:hover {
+            color: var(--brspl-accent);
+        }
+        
+        /* --- 4. MAP SECTION --- */
+        .map-section {
+            padding-bottom: 80px;
+        }
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* --- SHARED BUTTON STYLES --- */
+        .btn-primary {
+            background-color: var(--brspl-accent) !important;
+            border-color: var(--brspl-accent) !important;
+            font-weight: 600;
+            padding: 14px 35px; 
+            border-radius: 8px; 
+            box-shadow: 0 8px 15px rgba(127, 184, 59, 0.3); 
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+             background-color: #6a9c32 !important; 
+             border-color: #6a9c32 !important;
+             transform: translateY(-3px); 
+             box-shadow: 0 12px 20px rgba(127, 184, 59, 0.4); 
+        }
+
+        /* --- 5. FOOTER STYLES --- */
+        .footer-dark {
+            background-color: var(--brspl-dark) !important;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        .footer-dark h5 {
+            color: var(--brspl-accent);
+            font-weight: 600;
+        }
+        .footer-dark ul li a, .footer-dark p, .footer-dark address {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+        .footer-dark ul li a:hover {
+            color: var(--brspl-accent);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white sticky-top">
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="BRSPL Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quality.html">Quality Assurance</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="contact-banner">
+        <div class="container">
+            <h1 class="mb-3">Let's Discuss Your Project</h1>
+            <p class="lead">Whether you need technical support, product samples, or a quote, BRSPL is here to help you achieve color perfection.</p>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="contact-details" class="contact-section">
+            <div class="container">
+                <div class="row g-5">
+                    
+                    <div class="col-lg-7">
+                        <div class="contact-form-card">
+                            <h2>Send Us a Message</h2>
+                            <form action="#" method="POST">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="" disabled selected>Select Inquiry Type</option>
+                                        <option value="Sales">Sales / Quote Request</option>
+                                        <option value="Technical">Technical Support / R&D</option>
+                                        <option value="General">General Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100">SUBMIT INQUIRY</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <h2 class="fw-bold mb-4" style="color: var(--brspl-dark);">Our Locations</h2>
+                        
+                        <div class="info-block">
+                            <h4><i class="fas fa-headset"></i> Head Office (Sales & Admin)</h4>
+                            <p class="mb-1"><i class="fas fa-map-marker-alt"></i> Plot No. C-39, MIDC, TTC Indl. Area, <strong>Navi Mumbai - 400 705.</strong> INDIA</p>
+                            <p class="mb-1"><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 22 41410606</p>
+                            <p class="mb-0"><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@brspl.com">sales@brspl.com</a></p>
+                        </div>
+
+                        <div class="info-block">
+                            <h4><i class="fas fa-warehouse"></i> Works Unit (Manufacturing)</h4>
+                            <p class="mb-1"><i class="fas fa-map-marker-alt"></i> Plot No. G-116, GIDC Industrial Estate, <strong>Ankleshwar - 393 002.</strong> INDIA</p>
+                            <p class="mb-1"><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 2646 250100</p>
+                            <p class="mb-0"><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:works@brspl.com">info@brspl.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map-location" class="map-section">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-4" style="color: var(--brspl-dark);">Find Our Head Office</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=19.094250,73.029778&z=15&output=embed" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="text-white pt-5 pb-3 footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="img/logo.png" alt="BRSPL Logo" height="50" class="mb-3">
+                    <p class="text-white-50">MFG of Ceramic Colours (Glaze & Body). Precision and innovation in every batch since 1982.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white-50 text-decoration-none" href="about.html">Company Profile</a></li>
+                        <li><a class="text-white-50 text-decoration-none" href="products.html">Product Range</a></li>
+                        <li><a class="text-white-50 text-decoration-none" href="quality.html">R&D and Quality</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Head Office</h5>
+                    <address class="text-white-50">
+                        Plot No. C-39, MIDC, TTC Indl. Area,<br>
+                        Navi Mumbai - 400 705. INDIA<br>
+                        <i class="fas fa-phone me-2"></i> +91 22 41410606<br>
+                        <i class="fas fa-envelope me-2"></i> <a href="mailto:info@brspl.com" class="text-white-50 text-decoration-none">info@brspl.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary mt-3">
+                <p class="mb-0 small text-white-50">&copy; <span id="currentYear"></span> BRSPL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRSPL: Ceramic Colour Manufacturers - Glaze & Body Stains</title>
+    <meta name="description" content="Leading Indian manufacturer of high-performance ceramic colours, glaze stains, and body stains for tiles and sanitary ware since 1982. Request a quote today.">
+    <meta name="keywords" content="ceramic colours, glaze stains, body stains, ceramic pigments, Indian ceramic manufacturer, high temperature stains, vitrified tile colours">
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5qB4xIqj+Xy4M4oNn2XqF4sR8KjQk5eK8yW8u3tBf+4eN5I8HlVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Modern BRSPL Styling & Custom Variables */
+        :root {
+            --brspl-dark: #0f1c2e; 
+            --brspl-accent: #7fb83b; /* Lime Green */
+            --brspl-bg-soft: #f4f4f4; /* Lighter background for main sections */
+            --brspl-logo-blue: #007bff; /* BRSPL logo blue */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--brspl-dark);
+            background-color: var(--brspl-bg-soft); /* Light overall background */
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: white !important; /* White Navbar */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 20px; /* Rounded corners for floating effect */
+            margin: 15px; /* Margin to "float" */
+            width: calc(100% - 30px); /* Adjust width for margin */
+            position: fixed; /* Fixed position */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030; /* Above other content */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+            max-width: 1200px; /* Max width for central alignment */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .navbar-brand img {
+            height: 35px;
+            transition: all 0.3s ease;
+        }
+        .nav-link {
+            color: var(--brspl-dark) !important; /* Dark links */
+            font-weight: 500;
+            margin-left: 15px;
+            padding: 0.5rem 0; /* No horizontal padding for cleaner look */
+            position: relative;
+        }
+        .nav-link::after { /* Modern underline on hover */
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--brspl-accent);
+            transition: width .3s ease-out;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: var(--brspl-accent) !important;
+        }
+
+        /* Hero Section Styling (Asymmetric, Clean, with image on right) */
+        .hero-section {
+            background-color: white; /* Clean white background */
+            min-height: 85vh; 
+            display: flex;
+            align-items: center;
+            text-align: left; 
+            padding-top: 150px; /* Space for fixed navbar */
+            padding-bottom: 50px;
+            position: relative;
+            overflow: hidden; /* Hide overflowing abstract shapes */
+        }
+        /* Hero background graphic */
+        .hero-graphic {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 55%; /* Adjust width to show graphic */
+            background: url('img/hero-bg-section.png') right center no-repeat; /* Replace with your AI generated image */
+            background-size: cover;
+            opacity: 0.9;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative; /* Ensure content is above graphic */
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            font-weight: 800; 
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--brspl-dark); /* Dark text on light background */
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 550px;
+            color: #6c757d; /* Softer gray for subtitle */
+            margin-bottom: 30px;
+        }
+        
+        /* Primary button uses the accent color */
+        .btn-primary {
+            background-color: var(--brspl-accent) !important;
+            border-color: var(--brspl-accent) !important;
+            font-weight: 600;
+            padding: 14px 35px; /* Slightly larger button */
+            border-radius: 8px; /* More rounded */
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 15px rgba(127, 184, 59, 0.3); /* Accent color shadow */
+        }
+        .btn-primary:hover {
+             background-color: #6a9c32 !important; 
+             border-color: #6a9c32 !important;
+             transform: translateY(-3px); 
+             box-shadow: 0 12px 20px rgba(127, 184, 59, 0.4); 
+        }
+        
+        /* --- FEATURE BOX REFINEMENT (Quick Facts) --- */
+    .feature-section {
+        padding: 50px 0; /* Reduce padding for a tighter section */
+    }
+    .feature-box {
+        background: white;
+        padding: 40px;
+        border-radius: 12px; /* Smooth rounded corners */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); 
+        transition: all 0.3s ease;
+        height: 100%;
+        text-align: center;
+        border: 1px solid #f0f0f0; /* Very light border for definition */
+    }
+    .feature-box:hover {
+        transform: translateY(-5px); /* Lift effect */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    }
+    .feature-icon {
+        font-size: 2.5rem; /* Large icon */
+        color: var(--brspl-accent); 
+        margin-bottom: 15px;
+    }
+    .feature-box h3 {
+        font-weight: 700; /* Bolder title */
+        font-size: 1.5rem;
+        color: var(--brspl-dark);
+        margin-bottom: 10px;
+    }
+    .feature-box p {
+        font-weight: 400;
+        color: var(--brspl-text-secondary);
+        line-height: 1.6;
+    }
+
+       /* --- 4. PRODUCT & QUALITY STYLES --- */
+    .section-heading {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 60px;
+        color: var(--brspl-dark);
+    }
+    /* White Card (Product Info) */
+    .product-card-visual {
+        background: white;
+        padding: 50px; 
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+    .product-card-visual img {
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .product-card-visual h3 {
+        font-weight: 700;
+        color: var(--brspl-logo-blue);
+        margin-bottom: 15px; /* Added spacing */
+    }
+    .product-card-visual .list-unstyled i {
+        color: var(--brspl-accent); 
+    }
+    
+    /* Dark Block (Quality Assurance) - Enhanced with Accent */
+    .quality-block {
+        background-color: var(--brspl-dark); 
+        border-radius: 12px; 
+        color: white;
+        padding: 60px; 
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        position: relative;
+        overflow: hidden;
+    }
+    /* Dynamic Accent Background Element */
+    .quality-block::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px; /* Size of the accent shape */
+        height: 150px;
+        background: radial-gradient(circle at 100% 0%, rgba(127, 184, 59, 0.25) 0%, transparent 70%); /* Subtle radial gradient using accent */
+        border-radius: 0 12px 0 0;
+        z-index: 0;
+    }
+    .quality-block > * {
+        position: relative; /* Ensure content stacks above the pseudo-element */
+        z-index: 1;
+    }
+    .quality-block i {
+        color: var(--brspl-accent);
+    }
+    .quality-block h3 {
+        color: white; /* Changed title to white for higher contrast against the accent background */
+        font-weight: 700;
+    }
+    /* Quality list items are now cleaner */
+    .quality-block .list-unstyled li {
+        margin-bottom: 10px;
+    }
+    .quality-block .btn-light {
+        background-color: white !important;
+        color: var(--brspl-dark) !important; 
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 10px 25px;
+        transition: all 0.3s ease;
+    }
+    .quality-block .btn-light:hover {
+        background-color: var(--brspl-accent) !important;
+        color: white !important;
+    }
+
+    /* --- 6. FOOTER STYLES (Final Clean-up) --- */
+    .footer-dark {
+        background-color: var(--brspl-dark) !important;
+        color: white;
+        padding: 60px 0 20px;
+    }
+
+        .contact-cta-section {
+            background-color: var(--brspl-dark);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .contact-cta-section h2 {
+            font-weight: 700;
+        }
+        .contact-cta-section p {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-dark h5 {
+            color: var(--brspl-accent);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .footer-dark p, .footer-dark address, .footer-dark ul li a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-dark ul li a:hover {
+            color: var(--brspl-accent);
+        }
+        .footer-dark .border-secondary {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .hero-section {
+                text-align: center;
+                min-height: 70vh;
+                padding-top: 120px;
+            }
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            .hero-graphic {
+                display: none; /* Hide graphic on smaller screens if it causes clutter */
+            }
+            .navbar {
+                margin: 0;
+                width: 100%;
+                border-radius: 0;
+            }
+            .navbar-collapse {
+                background-color: var(--brspl-dark);
+                padding: 15px;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+            .nav-link {
+                margin-left: 0;
+                border-bottom: none;
+                padding: 8px 15px;
+            }
+            .nav-link:hover::after, .nav-link.active::after {
+                width: 0; /* Remove underline for mobile dropdown */
+            }
+            .nav-link.active {
+                color: var(--brspl-accent) !important;
+                background-color: rgba(255,255,255,0.1);
+                border-radius: 5px;
+            }
+            .quality-block, .product-card-visual {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white sticky-top">
+        <div class="container-fluid"> <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="BRSPL Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quality.html">Quality Assurance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-graphic"></div> <div class="container hero-content">
+            <div class="col-lg-6"> <h1 class="hero-title">
+                    Coloring Excellence. <span style="color: var(--brspl-accent);">Made in India.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    BRSPL is India's trusted manufacturer of Glaze and Body Stains, delivering unparalleled colour consistency and technical perfection since 1982.
+                </p>
+                <a href="products.html" class="btn btn-primary btn-lg shadow">
+                    EXPLORE OUR COLOUR RANGE
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="quick-facts" class="feature-section" style="background-color: var(--brspl-bg-soft);">
+            <div class="container">
+                <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <i class="fas fa-calendar-alt feature-icon"></i>
+                            <h3 class="h5">Proven Legacy</h3>
+                            <p class="mb-0">Over <strong>three decades</strong> of ceramic color manufacturing excellence since <strong>1982</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <i class="fas fa-globe feature-icon"></i>
+                            <h3 class="h5">Global Standards</h3>
+                            <p class="mb-0">Delivering consistency and quality compliance through <strong>20 years</strong> of continuous technical collaboration.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <i class="fas fa-truck-moving feature-icon"></i>
+                            <h3 class="h5">Scale & Reach</h3>
+                            <p class="mb-0"><strong>3,000 TPA</strong> capacity across two strategically located plants (Navi Mumbai & Ankleshwar).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="product-quality" class="py-5">
+            <div class="container py-5">
+                <h2 class="text-center section-heading">
+                    Precision. Consistency. BRSPL.
+                </h2>
+                <div class="row align-items-center g-5">
+                    
+                    <div class="col-lg-6">
+                        <div class="product-card-visual shadow-lg">
+                            <img src="img/Glaze-and-Body-Stains.jpg" alt="Glaze and Body Stains" class="img-fluid rounded mb-4">
+                            <h3 class="h4" style="color: var(--brspl-logo-blue);">Glaze & Body Stains</h3>
+                            <p>We manufacture one of the widest ranges of ceramic stains for coloration of glazes and vitrified tile bodies. Expect batch-to-batch consistency and high homogeneity for your demanding applications.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle me-2"></i> Polished/Unpolished Vitrified Tiles</li>
+                                <li><i class="fas fa-check-circle me-2"></i> Glazed Floor & Wall Tiles</li>
+                                <li><i class="fas fa-check-circle me-2"></i> Sanitary Wares & Potteries</li>
+                            </ul>
+                            <a href="products.html" class="btn btn-outline-primary mt-3" style="--bs-btn-color: var(--brspl-accent); --bs-btn-border-color: var(--brspl-accent); --bs-btn-hover-bg: rgba(127, 184, 59, 0.1);">View Full Product Tables</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="quality-block shadow-lg">
+                            <i class="fas fa-vials fa-3x mb-4"></i>
+                            <h3 class="display-6 fw-bold mb-3">Uncompromising Quality Assurance</h3>
+                            <p class="lead">Quality is deployed through every single process, from raw material procurement to finished product delivery.</p>
+                            <p>Our dedicated quality control team relies on state-of-the-art laboratory equipment to ensure world-class quality and constancy, including:</p>
+                            <ul class="list-unstyled mt-3">
+                                <li><i class="fas fa-vial me-2" style="color: var(--brspl-accent);"></i> Particle Size Analyzer</li>
+                                <li><i class="fas fa-vial me-2" style="color: var(--brspl-accent);"></i> XRD (X-ray Diffraction)</li>
+                                <li><i class="fas fa-vial me-2" style="color: var(--brspl-accent);"></i> Colorimeter & HRS Stating Facility</li>
+                            </ul>
+                            <a href="quality.html" class="btn btn-light mt-4">Learn More About Our R&D</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-cta" class="py-5 contact-cta-section text-center">
+            <div class="container py-4">
+                <h2 class="display-5 fw-bold mb-4">Ready to find your perfect color?</h2>
+                <p class="lead mb-5">Our expertise is ready to support your ceramic production needs with consistent, high-performance stains.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg shadow-lg">GET IN TOUCH WITH BRSPL</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-white pt-5 pb-3 footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="img/logo.png" alt="BRSPL Logo" height="50" class="mb-3">
+                    <p class="text-white-50">MFG of Ceramic Colours (Glaze & Body). Precision and innovation in every batch since 1982.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">Company Profile</a></li>
+                        <li><a href="products.html" class="text-white-50 text-decoration-none">Product Range</a></li>
+                        <li><a href="quality.html" class="text-white-50 text-decoration-none">R&D and Quality</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Head Office</h5>
+                    <address class="text-white-50">
+                        Plot No. C-39, MIDC, TTC Indl. Area,<br>
+                        Navi Mumbai - 400 705. INDIA<br>
+                        <i class="fas fa-phone me-2"></i> +91 22 41410606<br>
+                        <i class="fas fa-envelope me-2"></i> <a href="mailto:info@brspl.com" class="text-white-50 text-decoration-none">info@brspl.com</a>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="text-center pt-3 border-top border-secondary mt-3">
+                <p class="mb-0 small text-white-50">&copy; <span id="currentYear"></span> BRSPL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

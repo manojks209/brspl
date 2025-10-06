@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About BRSPL - Ceramic Colour Manufacturers</title>
+    <meta name="description" content="Learn about BRSPL's four decades of excellence in ceramic colour manufacturing. Dedicated to quality, innovation, and client success in tile and sanitary ware.">
+    <meta name="keywords" content="BRSPL history, ceramic company profile, manufacturing legacy, ceramic pigment supplier India, industrial ceramic colours">
+        
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Shared Global Variables */
+        :root {
+            --brspl-dark: #0f1c2e; 
+            --brspl-accent: #7fb83b; /* Lime Green: #7fb83b */
+            --brspl-bg-soft: #f4f4f4; 
+            --brspl-logo-blue: #007bff; 
+            --brspl-text-secondary: #495057; 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--brspl-dark);
+            background-color: var(--brspl-bg-soft); 
+        }
+
+        /* --- 1. NAVBAR STYLES (Floating/Clean) --- */
+        .navbar {
+            background-color: white !important; 
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 20px; 
+            margin: 15px; 
+            width: calc(100% - 30px); 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+            max-width: 1200px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .navbar-brand img { height: 35px; }
+        .nav-link { color: var(--brspl-dark) !important; font-weight: 500; margin-left: 15px; padding: 0.5rem 0; position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--brspl-accent); transition: width .3s ease-out; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { color: var(--brspl-accent) !important; }
+
+        /* --- 2. ABOUT PAGE BANNER --- */
+        .about-banner {
+            background-color: white; 
+            min-height: 40vh; 
+            padding-top: 150px; 
+            padding-bottom: 50px;
+            text-align: center;
+            border-bottom-left-radius: 20px; 
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+        .about-banner h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--brspl-dark);
+        }
+        .about-banner p {
+            font-size: 1.25rem;
+            color: var(--brspl-text-secondary);
+            max-width: 800px;
+            margin: 10px auto 0;
+        }
+        
+        /* --- 3. COMPANY PROFILE SECTION --- */
+        .company-profile-section {
+            padding: 80px 0;
+        }
+        .profile-heading {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--brspl-dark);
+            margin-bottom: 30px;
+        }
+        .profile-text {
+            line-height: 1.8;
+            color: var(--brspl-text-secondary);
+            font-size: 1.05rem;
+        }
+        .profile-image-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+        .profile-image-card img {
+            border-radius: 8px;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        /* --- 4. VISION & MISSION SECTION --- */
+        .vm-section {
+            background-color: white;
+            padding: 80px 0;
+        }
+        .vm-card {
+            padding: 40px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid var(--brspl-bg-soft);
+        }
+        .vm-card.mission {
+            background-color: var(--brspl-dark);
+            color: white;
+        }
+        .vm-card.mission h3 {
+            color: var(--brspl-accent);
+        }
+        .vm-card.vision {
+            background-color: var(--brspl-bg-soft);
+        }
+        .vm-card.vision h3 {
+            color: var(--brspl-logo-blue);
+        }
+        .vm-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- SHARED BUTTON STYLES --- */
+        .btn-primary {
+            background-color: var(--brspl-accent) !important;
+            border-color: var(--brspl-accent) !important;
+            font-weight: 600;
+            padding: 14px 35px; 
+            border-radius: 8px; 
+            box-shadow: 0 8px 15px rgba(127, 184, 59, 0.3); 
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+             background-color: #6a9c32 !important; 
+             border-color: #6a9c32 !important;
+             transform: translateY(-3px); 
+             box-shadow: 0 12px 20px rgba(127, 184, 59, 0.4); 
+        }
+
+        /* --- 5. FOOTER STYLES (Clean) --- */
+        .footer-dark {
+            background-color: var(--brspl-dark) !important;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        .footer-dark h5 {
+            color: var(--brspl-accent);
+            font-weight: 600;
+        }
+        .footer-dark ul li a, .footer-dark p, .footer-dark address {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+        .footer-dark ul li a:hover {
+            color: var(--brspl-accent);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white sticky-top">
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="BRSPL Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quality.html">Quality Assurance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-banner">
+        <div class="container">
+            <h1>Our Legacy of Excellence</h1>
+            <p class="lead">For over three decades, BRSPL has pioneered the ceramic color industry in India, combining indigenous expertise with global technical standards.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="company-profile" class="company-profile-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    
+                    <div class="col-lg-5">
+                        <div class="profile-image-card">
+                            <img src="img/quality-assurance.png" alt="BRSPL Modern Manufacturing Facility" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <h2 class="profile-heading"><span style="color: var(--brspl-accent);">BRSPL:</span> Coloring India Since 1982</h2>
+                        <p class="profile-text">
+                            Established in <strong>1982</strong>, BRSPL (formerly a joint venture with a European leader) has grown into India's leading manufacturer of Glaze and Body Stains. Our journey began with a commitment to providing the Indian ceramic industry with internationally benchmarked color quality and consistency.
+                        </p>
+                        <p class="profile-text">
+                            We operate two state-of-the-art manufacturing plants in <strong>Navi Mumbai</strong> and <strong>Ankleshwar</strong>, utilizing advanced German technologies and process controls. Our core strength lies in our ability to deliver highly stable colors for demanding applications, backed by <strong>20 years</strong> of continuous technical knowledge sharing.
+                        </p>
+                        <p class="profile-text fw-bold" style="color: var(--brspl-logo-blue);">
+                            Our total manufacturing capacity stands at 3,000 tonnes per annum (TPA), serving major clients in Vitrified Tiles, Sanitary Ware, and traditional Pottery sectors.
+                        </p>
+                        <a href="quality.html" class="btn btn-outline-secondary mt-3" style="--bs-btn-color: var(--brspl-dark); --bs-btn-border-color: var(--brspl-dark); --bs-btn-hover-bg: rgba(15, 28, 46, 0.1);">View Our Manufacturing Process <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision-mission" class="vm-section">
+            <div class="container">
+                <div class="row g-4">
+                    
+                    <div class="col-md-6">
+                        <div class="vm-card mission shadow-sm">
+                            <i class="fas fa-bullseye mb-3" style="color: white;"></i>
+                            <h3>Our Mission</h3>
+                            <p class="lead" style="color: rgba(255, 255, 255, 0.9);">
+                                To be the <strong>most reliable and technically advanced</strong> partner for ceramic producers, ensuring unparalleled batch-to-batch color stability and efficiency in every application.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="vm-card vision shadow-sm">
+                            <i class="fas fa-binoculars mb-3" style="color: var(--brspl-accent);"></i>
+                            <h3>Our Vision</h3>
+                            <p class="lead" style="color: var(--brspl-text-secondary);">
+                                To drive the future of Indian ceramic coloration by continuous <strong>R&D and process innovation</strong>, setting the benchmark for sustainable and high-performance stains globally.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-cta" class="py-5" style="background-color: var(--brspl-dark); color: white; text-align: center;">
+            <div class="container py-4">
+                <h2 class="display-5 fw-bold mb-4">Partner with India's Color Leader</h2>
+                <p class="lead mb-5" style="color: rgba(255, 255, 255, 0.7);">Our commitment to quality, consistency, and technical support is your guarantee of success.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg shadow-lg">GET IN TOUCH WITH BRSPL</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-white pt-5 pb-3 footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="img/logo.png" alt="BRSPL Logo" height="50" class="mb-3">
+                    <p class="text-white-50">MFG of Ceramic Colours (Glaze & Body). Precision and innovation in every batch since 1982.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">Company Profile</a></li>
+                        <li><a href="products.html" class="text-white-50 text-decoration-none">Product Range</a></li>
+                        <li><a href="quality.html" class="text-white-50 text-decoration-none">R&D and Quality</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Head Office</h5>
+                    <address class="text-white-50">
+                        Plot No. C-39, MIDC, TTC Indl. Area,<br>
+                        Navi Mumbai - 400 705. INDIA<br>
+                        <i class="fas fa-phone me-2"></i> +91 22 41410606<br>
+                        <i class="fas fa-envelope me-2"></i> <a href="mailto:info@brspl.com" class="text-white-50 text-decoration-none">info@brspl.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary mt-3">
+                <p class="mb-0 small text-white-50">&copy; <span id="currentYear"></span> BRSPL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

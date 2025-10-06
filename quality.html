@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Assurance & R&D - BRSPL</title>
+    <meta name="description" content="BRSPL guarantees batch-to-batch consistency using advanced lab equipment (XRD, Colorimeter) and rigorous 4-step process control. Certified ceramic colour quality.">
+    <meta name="keywords" content="ceramic colour quality control, X-ray diffraction pigments, ceramic R&D, pigment consistency, colorimeter testing, batch control">
+    
+    <!-- Google Fonts for Modern Typography (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Font Awesome for Icons (Fixed link) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Shared Global Variables */
+        :root {
+            --brspl-dark: #0f1c2e; 
+            --brspl-accent: #7fb83b; /* Lime Green: #7fb83b */
+            --brspl-bg-soft: #f4f4f4; 
+            --brspl-logo-blue: #007bff; 
+            --brspl-text-secondary: #495057; 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--brspl-dark);
+            background-color: var(--brspl-bg-soft); 
+        }
+
+        /* --- 1. NAVBAR STYLES (Floating/Clean) --- */
+        .navbar {
+            background-color: white !important; 
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 20px; 
+            margin: 15px; 
+            width: calc(100% - 30px); 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+            max-width: 1200px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .navbar-brand img { height: 35px; }
+        .nav-link { color: var(--brspl-dark) !important; font-weight: 500; margin-left: 15px; padding: 0.5rem 0; position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--brspl-accent); transition: width .3s ease-out; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-link.active { color: var(--brspl-accent) !important; }
+
+        /* --- 2. QUALITY BANNER --- */
+        .quality-banner {
+            background: linear-gradient(135deg, white 60%, rgba(127, 184, 59, 0.1) 100%); /* Slight accent fade */
+            min-height: 40vh; 
+            padding-top: 150px; 
+            padding-bottom: 50px;
+            text-align: center;
+            border-bottom-left-radius: 20px; 
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+        .quality-banner h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--brspl-dark);
+        }
+        .quality-banner p {
+            font-size: 1.25rem;
+            color: var(--brspl-text-secondary);
+            max-width: 900px;
+            margin: 10px auto 0;
+        }
+
+        /* --- 3. LABORATORY/EQUIPMENT SECTION --- */
+        .lab-section {
+            padding: 80px 0;
+        }
+        .lab-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--brspl-dark);
+            margin-bottom: 50px;
+        }
+        .equipment-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            text-align: center;
+        }
+        .equipment-card i {
+            font-size: 3rem;
+            color: var(--brspl-logo-blue); /* Use blue for scientific instruments */
+            margin-bottom: 15px;
+        }
+        .equipment-card h4 {
+            font-weight: 700;
+            color: var(--brspl-dark);
+        }
+        .equipment-card:hover {
+            border-bottom: 5px solid var(--brspl-accent); /* Subtle hover highlight */
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        /* --- 4. PROCESS CONTROL SECTION (Dark Block) --- */
+        .process-control-block {
+            background-color: var(--brspl-dark);
+            color: white;
+            padding: 80px 0;
+        }
+        .process-control-block h2 {
+            font-weight: 700;
+            color: var(--brspl-accent);
+        }
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        .step-icon-container {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-color: var(--brspl-accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--brspl-dark);
+        }
+        .process-step h4 {
+            font-weight: 600;
+            margin-top: 0;
+        }
+        .process-step p {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* --- 5. R&D FOCUS --- */
+        .rd-focus-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        .rd-focus-section h2 {
+            font-weight: 700;
+            color: var(--brspl-dark);
+        }
+        .rd-focus-section i {
+            color: var(--brspl-accent);
+            font-size: 1.5rem;
+        }
+
+        /* --- SHARED BUTTON STYLES --- */
+        .btn-primary {
+            background-color: var(--brspl-accent) !important;
+            border-color: var(--brspl-accent) !important;
+            font-weight: 600;
+            padding: 14px 35px; 
+            border-radius: 8px; 
+            box-shadow: 0 8px 15px rgba(127, 184, 59, 0.3); 
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+             background-color: #6a9c32 !important; 
+             border-color: #6a9c32 !important;
+             transform: translateY(-3px); 
+             box-shadow: 0 12px 20px rgba(127, 184, 59, 0.4); 
+        }
+
+        /* --- 6. FOOTER STYLES --- */
+        .footer-dark {
+            background-color: var(--brspl-dark) !important;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        .footer-dark h5 {
+            color: var(--brspl-accent);
+            font-weight: 600;
+        }
+        .footer-dark ul li a, .footer-dark p, .footer-dark address {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+        .footer-dark ul li a:hover {
+            color: var(--brspl-accent);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. Navigation Bar (Floating/Clean) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white sticky-top">
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="BRSPL Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="quality.html">Quality Assurance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Quality Banner -->
+    <header class="quality-banner">
+        <div class="container">
+            <h1 class="mb-3">Precision Through Process</h1>
+            <p class="lead">BRSPL's reputation is built on <strong>uncompromising batch-to-batch consistency</strong>. Our Quality Assurance program governs every step, from raw material sourcing to final firing tests.</p>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- 3. Laboratory/Equipment Section -->
+        <section id="laboratory" class="lab-section">
+            <div class="container">
+                <h2 class="text-center lab-heading">Advanced Laboratory & Testing Facilities</h2>
+                <div class="row g-4">
+                    
+                    <!-- Card 1: Particle Size -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="equipment-card">
+                            <i class="fas fa-microscope"></i>
+                            <h4>Particle Size Analysis</h4>
+                            <p class="text-secondary">Crucial for pigment performance, our analyzers ensure optimal micronization for uniform dispersion in glazes and bodies, minimizing specking.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: X-Ray Diffraction -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="equipment-card">
+                            <i class="fas fa-atom"></i>
+                            <h4>X-Ray Diffraction (XRD)</h4>
+                            <p class="text-secondary">Used for phase identification and quantitative analysis, the XRD confirms the formation and purity of the spinel or colorant crystal structure.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3: Color Matching -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="equipment-card">
+                            <i class="fas fa-fill-drip"></i>
+                            <h4>Colorimeter & HRS Testing</h4>
+                            <p class="text-secondary">All batches are tested using a high-precision colorimeter and a lab-scale High-Speed Roller (HRS) kiln for real-world simulation and strict color matching.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. Process Control Section (Dark Block) -->
+        <section id="process-control" class="process-control-block">
+            <div class="container">
+                <h2 class="text-center mb-5">Our 4-Step Quality Control Guarantee</h2>
+                <div class="row g-5">
+                    
+                    <!-- Step 1 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="process-step">
+                            <div class="step-icon-container">1</div>
+                            <div>
+                                <h4>Raw Material Verification</h4>
+                                <p>Incoming raw materials are subjected to rigorous chemical analysis before acceptance to ensure initial purity and compliance with formulation requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="process-step">
+                            <div class="step-icon-container">2</div>
+                            <div>
+                                <h4>Inter-Process Testing</h4>
+                                <p>Mid-batch samples are taken after calcination and milling. Checks are performed on fineness, homogeneity, and chemical composition before further processing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="process-step">
+                            <div class="step-icon-container">3</div>
+                            <div>
+                                <h4>Final Batch Approval (Firing)</h4>
+                                <p>The finished product is fired in our controlled kiln environment on a standard reference glaze/body to confirm color strength and shade conformity.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="process-step">
+                            <div class="step-icon-container">4</div>
+                            <div>
+                                <h4>Packaging & Traceability</h4>
+                                <p>Each drum is stamped with a unique batch number, allowing full traceability back to the raw material receipt and the QC firing records for audit purposes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5. R&D Focus -->
+        <section id="research-development" class="rd-focus-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Driving Innovation in Ceramic Colour</h2>
+                        <p class="lead text-secondary">Our R&D department is dedicated to developing the next generation of cost-effective, high-performance, and environmentally sustainable ceramic stains.</p>
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-3"><i class="fas fa-flask me-3"></i> <strong>New Product Development:</strong> Creating novel color phases to meet emerging market trends in digital printing and large format tiles.</li>
+                            <li class="mb-3"><i class="fas fa-chart-line me-3"></i> <strong>Cost Optimization:</strong> Continuously refining production recipes and processes to maximize efficiency without compromising color strength or stability.</li>
+                            <li class="mb-3"><i class="fas fa-recycle me-3"></i> <strong>Sustainable Solutions:</strong> Researching lower-temperature firing pigments and alternative raw material sourcing to reduce environmental impact.</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline-primary mt-4" style="--bs-btn-color: var(--brspl-dark); --bs-btn-border-color: var(--brspl-dark); --bs-btn-hover-bg: rgba(15, 28, 46, 0.1);">Contact R&D Team</a>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <!-- Placeholder image for a laboratory setting or R&D diagram -->
+                        <img src="img/qual-assurance-1.jpg" alt="R&D Lab Testing" class="img-fluid rounded-3 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6. Final CTA (Shared Component) -->
+        <section id="contact-cta" class="py-5" style="background-color: var(--brspl-dark); color: white; text-align: center;">
+            <div class="container py-4">
+                <h2 class="display-5 fw-bold mb-4">Have a Technical or Quality Question?</h2>
+                <p class="lead mb-5" style="color: rgba(255, 255, 255, 0.7);">Our technical support team is ready to assist with any application, formulation, or QC challenge.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg shadow-lg">GET IN TOUCH WITH BRSPL</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. Footer (Shared Component) -->
+    <footer class="text-white pt-5 pb-3 footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="img/logo.png" alt="BRSPL Logo" height="50" class="mb-3">
+                    <p class="text-white-50">MFG of Ceramic Colours (Glaze & Body). Precision and innovation in every batch since 1982.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white-50 text-decoration-none" href="about.html">Company Profile</a></li>
+                        <li class="text-white-50 text-decoration-none"><a href="products.html">Product Range</a></li>
+                        <li class="text-white-50 text-decoration-none"><a href="quality.html">R&D and Quality</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 style="color: var(--brspl-accent);">Head Office</h5>
+                    <address class="text-white-50">
+                        Plot No. C-39, MIDC, TTC Indl. Area,<br>
+                        Navi Mumbai - 400 705. INDIA<br>
+                        <i class="fas fa-phone me-2"></i> +91 22 41410606<br>
+                        <i class="fas fa-envelope me-2"></i> <a href="mailto:info@brspl.com" class="text-white-50 text-decoration-none">info@brspl.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary mt-3">
+                <p class="mb-0 small text-white-50">&copy; <span id="currentYear"></span> BRSPL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN (Bundle with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript for year update -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
